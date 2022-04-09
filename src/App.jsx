@@ -1,14 +1,16 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './page/Home'
-import './App.css'
 import Cart from './page/Cart'
 import Navbar from './components/Navbar'
+import store from './store/store'
+import {Provider} from 'react-redux'
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   return (
     <div className="App">
+      <Provider store={store}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
+        </Provider>
     </div>
   )
 }
