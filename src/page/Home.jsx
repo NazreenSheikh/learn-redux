@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <div>
       <h2 className="heading"> welcome to myStore</h2>
-      <section className="products">
-        <h2 className="heading">Products</h2>`
+      <section>
+        <h2>Products</h2>`
         <Products />
       </section>
     </div>
